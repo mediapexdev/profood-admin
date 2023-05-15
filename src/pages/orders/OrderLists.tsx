@@ -2,7 +2,8 @@ import Table from 'react-bootstrap/Table';
 
 export const OrderList:React.FC=()=> {
   return (
-    <Table striped>
+    <div className='m-4'>
+    <Table bordered hover striped responsive="sm">
       <thead>
         <tr>
           <th>ID Commande</th>
@@ -20,7 +21,7 @@ export const OrderList:React.FC=()=> {
           <td>21/6/2023</td>
           <td>123 000 F CFA</td>
           <td><span className='primary'>validée</span></td>
-          <td><button >Actions</button></td>
+          <td><button className='btn btn-success' >Actions</button></td>
         </tr>
         <tr>
         <td>2</td>
@@ -28,7 +29,7 @@ export const OrderList:React.FC=()=> {
           <td>21/6/2023</td>
           <td>150 000 F CFA</td>
           <td><span className='primary'>validée</span></td>
-          <td><button >Actions</button></td>
+          <td><button className='btn btn-success' >Actions</button></td>
         </tr>
         <tr>
         <td>3</td>
@@ -36,10 +37,11 @@ export const OrderList:React.FC=()=> {
           <td>21/5/2023</td>
           <td>90 000 F CFA</td>
           <td><span className='primary'>validée</span></td>
-          <td><button >Actions</button></td>
+          <td><button className='btn btn-success' >Actions</button></td>
         </tr>
       </tbody>
     </Table>
+    </div>
   );
 }
 

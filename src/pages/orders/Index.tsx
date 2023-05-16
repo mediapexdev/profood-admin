@@ -6,7 +6,7 @@ export const OrdersPage:React.FC=()=>{
     return(
         <>
         <Header />
-        <h1 className="ms-5">Résumé Commandes</h1>
+        <h1 className="ms-5 center">Résumé Commandes</h1>
         <div className="ms-5">
         <OrderTypes />
         </div>

@@ -26,6 +26,7 @@ export type Order={
     longitude: number,
     montant: number,
     contact_name: string,
+    contact_phone:string,
     user:User,
     cart:Cart,
     statut:string,

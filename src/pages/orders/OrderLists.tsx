@@ -3,13 +3,19 @@ import Table from 'react-bootstrap/Table';
 import { Order } from '../../interfaces/Interfaces';
 import { useOrderListContext } from '../../context/OrderListProvider';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export interface OrderPropsList {
   orders: Order[]
 }
+
 export const OrderList: React.FC = () => {
   const{orders,setOnEdit,updateStatus}=useOrderListContext(); 
   const [status,setStatus]=useState<number>(0);
+  const navigate=useNavigate();
+  const navigateToDetail=()=>{
+  navigate('/order-detail/1');
+  }
   return (
     <div className='m-4'>
       <Table bordered hover striped responsive="sm">
@@ -52,7 +58,7 @@ export const OrderList: React.FC = () => {
             }
             
             </td>
-            <td><button className='btn btn-success' >Voir</button></td>
+            <td><button className='btn btn-success' onClick={()=>navigateToDetail()}>Voir</button></td>
           </tr>
             )
           }
